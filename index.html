@@ -11,11 +11,21 @@
 <body>
     <div class="fluid-container">
         <div class="main-body col-12">
-            <div class="box">
-                <div class="ContentText">
-                    <p class="TopText">Guess The Number From 0 to 100.</p>
+            <div class="ContentText">
+                <p class="TopText">Guess The Number From 0 to 100.</p>
+            </div>
+            <div id="Ranger">
+                <div id="LeftBar">
+                    <div id="leftbar">
+                    </div>
                 </div>
-                <div id="Chance"></div>
+                <div id="RangeGuess"></div>
+                <div id="RightBar">
+                    <div id="rightbar">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
                 <div class="InputOutput">
                     <input type="text" id="NumberBox">
                     <button type="submit" id="CheckButton" onclick="Check()">CHECK</button>
@@ -23,6 +33,7 @@
                 <div id="FinalMessage">
                 </div>
             </div>
+            <div id="Chance"></div>
         </div>
     </div>
     <script src="script.js"></script>
