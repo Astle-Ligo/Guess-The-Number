@@ -24,14 +24,18 @@ var Ranger = document.getElementById("Ranger")
 
 var i=10; 
 
+let guess = 0;
+
 var BarWidth
 
     ChanceMessage.innerHTML = "You Have "+i+" Chances Left.";
     Chance.prepend(ChanceMessage)
 
 function Check(){
-    let guess = document.getElementById("NumberBox").value
+    guess = document.getElementById("NumberBox").value
     console.log(guess) 
+
+    document.getElementById("finalmessage").style.display= "block"
 
     RangeGuessMessage.innerHTML = guess
     RangeGuess.prepend(RangeGuessMessage)
@@ -40,37 +44,47 @@ function Check(){
         window.alert("Your Guess " + guess + " Matched")
         location.reload();
     }
-    else if(Math.abs(guess-answer)<=5){
-        message.innerHTML = "Your Guess (" + guess + ") is Very Close to (difference less than or 5)"
-        leftbarMessage.innerHTML = (guess - 5) + " ----- "
-        rightbarMessage.innerHTML = "-----" + (+guess + 5)
+    else if(Math.abs(guess-answer)<=3){
+        message.innerHTML = "Your Guess (" + guess + ") is too Close to (difference less than or 3)"
+        leftbarMessage.innerHTML = (guess - 5)
+        rightbarMessage.innerHTML = (+guess + 5)
         BarWidth = 35
         LeftBar.style.justifyContent = "flex-end"
         RightBar.style.justifyContent = "flex-start"
     }
+    else if(Math.abs(guess-answer)<=5){
+        message.innerHTML = "Your Guess (" + guess + ") is Very Close to (difference less than or 5)"
+        leftbarMessage.innerHTML = (guess - 5)
+        rightbarMessage.innerHTML = (+guess + 5)
+        BarWidth = 45
+        LeftBar.style.justifyContent = "flex-end"
+        RightBar.style.justifyContent = "flex-start"
+    }
     else if(Math.abs(guess-answer)<=10){
-        message.innerHTML = "Your Guess (" + guess + ") is Too Close (difference less than or 10)"
-        leftbarMessage.innerHTML = (guess - 10) + " ----- "
-        rightbarMessage.innerHTML = "-----" + (+guess + 10) 
-        BarWidth = 50
+        message.innerHTML = "Your Guess (" + guess + ") is Close (difference less than or 10)"
+        leftbarMessage.innerHTML = (guess - 10)
+        rightbarMessage.innerHTML = (+guess + 10) 
+        BarWidth = 60
         LeftBar.style.justifyContent = "flex-end"
         RightBar.style.justifyContent = "flex-start"
     }
     else if(Math.abs(guess-answer)<=25){
         message.innerHTML = "Your Guess (" + guess + ") is A Bit Far (difference less than or 25)"
-        leftbarMessage.innerHTML = (guess - 25) + " ----- "
-        rightbarMessage.innerHTML = "-----" + (+guess + 25)  
-        BarWidth = 70
+        leftbarMessage.innerHTML = (guess - 25)
+        rightbarMessage.innerHTML = (+guess + 25)  
+        BarWidth = 75
         LeftBar.style.justifyContent = "flex-end"
         RightBar.style.justifyContent = "flex-start"
     }
     else{
         message.innerHTML = "Your Guess (" + guess + ") is Too Far (difference greater than 25)"
-        leftbarMessage.innerHTML = "----" + (guess - 25)
-        rightbarMessage.innerHTML = (+guess + 25) + " ----- "
-        BarWidth = 80
+        leftbarMessage.innerHTML = (guess - 25)
+        rightbarMessage.innerHTML = (+guess + 25)
+        BarWidth = 85
         LeftBar.style.justifyContent = "flex-start"
         RightBar.style.justifyContent = "flex-end"
+        leftbar.style.justifyContent = "flex-end"
+        rightbar.style.justifyContent = "flex-start"
     }
 
     leftbar.prepend(leftbarMessage)
@@ -95,12 +109,6 @@ function Check(){
 document.body.addEventListener('keydown', function(event){
     const key = event.key;
     switch (key) {
-        case "ArrowUp":
-            ++guess    
-        break;
-        case "ArrowDown":
-            --guess 
-        break;
         case "Enter":
             Check()
         break;

@@ -9,18 +9,6 @@
     justify-content: center;
     align-items: center ;
 }
-.box{
-    height: 20rem;
-    width: 40rem;
-    border: 2px solid black;
-    border-radius: 5rem;
-    display: grid;
-    justify-content: center;
-    background-color: teal;
-}
-.TopText{
-    font-size: 2rem;
-}
 .ContentText{
     height: 7rem;
     width: 100%;
@@ -28,6 +16,92 @@
     justify-content: center;
     align-items: center;
     float: left;
+    background-color: aquamarine;
+}
+.TopText{
+    font-size: 2rem;
+}
+.MessageBody{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+}
+#finalmessage{
+    display: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+#Ranger{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#LeftBar{
+    width: 20rem;
+    height: 2rem;
+    border: solid 1px black;
+    display: flex;
+    border-radius: 25rem 0 0 25rem;
+}
+#leftbar{
+    border-radius: 25rem 0 0 25rem;
+    display: flex;
+    justify-content: flex-start;
+}
+#RangeGuess{
+    width: 5rem;
+    aspect-ratio: 1;
+    background-color: aqua;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#RightBar{
+    width: 20rem;
+    height: 2rem;
+    border: solid 1px black;
+    display: flex;
+    border-radius: 0 25rem 25rem 0; 
+}
+#rightbar{
+    border-radius: 0 25rem 25rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+#leftbar ,#rightbar{
+    height: 100%;
+    background-color: black;
+    padding-inline: 10%;
+}
+#leftbar, #rightbar p{
+    color: white;
+}
+#FinalMessage{
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+#FinalMessage p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box-main{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    height: 12rem;
+    border: 2px solid black;
+    border-radius: 5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: teal;
 }
 .InputOutput{
     height: 7rem;
@@ -36,24 +110,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    float: left;
-}
-#Chance{
-    height: 3rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#Chance p{
-    font-size: 2rem;
-}
-#FinalMessage{
-    height: 3rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     float: left;
 }
 #NumberBox{
@@ -72,50 +128,22 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
 }
-#FinalMessage p{
-    font-size: 1rem;
-    font-weight: 500;
-}
-#Ranger{
-    display: none;
-    justify-content: center;
-    align-items: center;
-}   
-#LeftBar{
-    width: 20rem;
-    height: 2rem;
-    border: solid 1px black;
-    display: flex;
-    border-radius: 25rem 0 0 25rem;
-}
-#RightBar{
-    width: 20rem;
-    height: 2rem;
-    border: solid 1px black;
-    display: flex;
-    border-radius: 0 25rem 25rem 0; 
-}
-#RangeGuess{
-    width: 5rem;
-    aspect-ratio: 1;
-    background-color: aqua;
-    border-radius: 20px;
+#Chance{
+    height: 3rem;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#leftbar ,#rightbar{
-    height: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
+#Chance p{
+    font-size: 2rem;
 }
-#leftbar{
-    border-radius: 25rem 0 0 25rem;
-}
-#rightbar{
-    border-radius: 0 25rem 25rem 0;
-}
-#leftbar, #rightbar p{
-    color: white;
-}
+
+
+
+   
+
+
+
+
+

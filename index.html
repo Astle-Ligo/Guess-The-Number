@@ -9,32 +9,39 @@
     <title>Guess The Number</title>
 </head>
 <body>
-    <div class="fluid-container">
+    <div class="fluid-container col-12">
         <div class="main-body col-12">
             <div class="ContentText">
                 <p class="TopText">Guess The Number From 0 to 100.</p>
+            </div>
+            <div class="MessageBody">
+                <p id="finalmessage">The Answer Lies on the Black Region</p>
             </div>
             <div id="Ranger">
                 <div id="LeftBar">
                     <div id="leftbar">
                     </div>
                 </div>
-                <div id="RangeGuess"></div>
+                <div id="RangeGuess">
+            
+                </div>
                 <div id="RightBar">
                     <div id="rightbar">
+                </div>
+                </div>
+            </div>
+            <div id="FinalMessage">
+            </div>
+            <div class="box-main col-12">
+                <div class="box col-9">
+                    <div class="InputOutput col-12">
+                        <input type="text" id="NumberBox" class="col-5">
+                        <button type="submit" id="CheckButton" class="col-5" onclick="Check()">CHECK</button>
                     </div>
                 </div>
             </div>
-            <div class="box">
-                <div class="InputOutput">
-                    <input type="text" id="NumberBox">
-                    <button type="submit" id="CheckButton" onclick="Check()">CHECK</button>
-                </div>
-                <div id="FinalMessage">
-                </div>
-            </div>
             <div id="Chance"></div>
-        </div>
+    </div>
     </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
